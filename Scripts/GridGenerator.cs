@@ -106,7 +106,6 @@ public class GridGenerator : MonoBehaviour
             new (-455, -231), new (-455, -308), new (-455, -384)
         };
 
-        // Створення міток для нижнього рядка (стовпці)
         for (int i = 0; i < bottomPositions.Length; i++)
         {
             Vector2 pixelPos = bottomPositions[i];
@@ -126,7 +125,6 @@ public class GridGenerator : MonoBehaviour
             _columnNumbersBottom.Add(text);
         }
 
-        // Створення міток для лівого стовпця (рядки)
         for (int i = 0; i < leftPositions.Length; i++)
         {
             Vector2 pixelPos = leftPositions[i];
@@ -149,7 +147,6 @@ public class GridGenerator : MonoBehaviour
 
     public void UpdateNumbers()
     {
-        // Оновлення чисел для рядків (зліва)
         for (int y = 0; y < height; y++)
         {
             int count = 0;
@@ -164,7 +161,6 @@ public class GridGenerator : MonoBehaviour
                 _rowNumbersLeft[labelIndex].text = count.ToString();
         }
 
-        // Оновлення чисел для стовпців (знизу)
         for (int x = 0; x < width; x++)
         {
             int count = 0;
